@@ -57,4 +57,17 @@
     border: 1px solid #ffffff;
     border-radius: 0.5rem;
     padding: 0.5rem;
+    background-color: rgba(1, 1, 1, .2);
+}
+
+.team-channel__list_wrapper {
+    margin-top: 1rem;
+}
+
+.team-channel__list__header {
+    margin-bottom: 1rem;
+}
+
+.team-channel__list__header_title {
+    font-weight: bold;
 }
