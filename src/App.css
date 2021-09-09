@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
+.app__wrapper {
+    display: flex;
+    height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.channel-list__sidebar {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    background-color: #e1c9f8;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.channel-lists__list__wrapper {
+    flex: 0.2;
+    background-color: #0a007c;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.channel-lists__icon {
+    flex: 0.1;
+    color: #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
+.channel-lists__search {
+    margin-top: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.channel-lists__input__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.channel-lists__input__text {
+    flex: 0.9;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    font-family: "IRANSANSX-Regular";
+    padding: 0.1rem;
+    margin-right: 0.2rem;
+}
+
+.channel-lists__input__text::placeholder {
+    color: #ffffff;
+    font-family: 'IRANSANSX-Regular';
+}
+
+.channel-lists__input__wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ffffff;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
 }
