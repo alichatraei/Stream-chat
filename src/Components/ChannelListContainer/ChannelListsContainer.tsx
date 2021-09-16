@@ -5,6 +5,17 @@ import { ChannelSearch, TeamChannelList, TeamChannelPreview } from '../'
 
 import SchoolIcon from '../../Assets/icons/SchoolIcon.png'
 import LogoutIcon from '../../Assets/icons/LogoutIcon.png'
+const logoutHandle = () => {
+    const cookies = new Cookies()
+    cookies.remove('token')
+    cookies.remove('avatar')
+    cookies.remove('fullName')
+    cookies.remove('hashedPassword')
+    cookies.remove('userId')
+    cookies.remove('phoneNumber')
+
+    window.location.reload()
+}
 const SideBar = () => (
     <div className="channel-list__sidebar">
         <div className="channel-list__sidebar__icon1">
@@ -13,7 +24,7 @@ const SideBar = () => (
             </div>
         </div>
         <div className="channel-list__sidebar__icon2">
-            <div className="icon1__inner">
+            <div className="icon1__inner" onClick={logoutHandle}>
                 <img src={LogoutIcon} alt='Logout Icon' width="40" title="خروج" />
             </div>
         </div>
@@ -24,7 +35,12 @@ const SchoolHeader = () => (
         <p className="channel-list__header__text">ارتباط بین مدارس</p>
     </div>
 )
-const ChannelListsContainer = () => {
+const ChannelListsContainer: React.FC<any> = (
+    {
+        setCreateType,
+        setIsCreating,
+        isCreating,
+        setIsEditing }) => {
     return (
         <>
             <SideBar />

@@ -9,7 +9,7 @@ body,
   width: 100%;
   height: 100%;
   direction: rtl;
-  font-family: 'IRANSANSX-Regular', sans-serif;
+  font-family: 'IRANSANSX-Regular', sans-serif !important;
 }
 
 * {
